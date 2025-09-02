@@ -394,3 +394,79 @@ Detected existing codebase(s): default
     at async Object.setup (/nix/store/mb7dm7av34020nn56xbny0fl17nwiddp-firebase-tools-14.14.0/lib/node_modules/firebase-tools/lib/init/features/functions/python.js:14:5)
 [error] 
 [error] Error: An unexpected error has occurred.
+[debug] [2025-09-02T12:51:32.105Z] ----------------------------------------------------------------------
+[debug] [2025-09-02T12:51:32.113Z] Command:       /nix/store/ws50yvm6vzlzf7jzz6n7xh4szddrack1-nodejs-20.19.1/bin/node /nix/store/mb7dm7av34020nn56xbny0fl17nwiddp-firebase-tools-14.14.0/lib/node_modules/firebase-tools/lib/bin/firebase.js deploy
+[debug] [2025-09-02T12:51:32.114Z] CLI Version:   14.14.0
+[debug] [2025-09-02T12:51:32.114Z] Platform:      linux
+[debug] [2025-09-02T12:51:32.117Z] Node Version:  v20.19.1
+[debug] [2025-09-02T12:51:32.117Z] Time:          Tue Sep 02 2025 12:51:32 GMT+0000 (Coordinated Universal Time)
+[debug] [2025-09-02T12:51:32.117Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-09-02T12:51:33.546Z] No OAuth tokens found
+[debug] [2025-09-02T12:51:33.548Z] No OAuth tokens found
+[error] Failed to fetch Firebase Project from current Studio Workspace: Unable to refresh auth: not yet authenticated.
+[debug] [2025-09-02T12:51:33.566Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2025-09-02T12:51:33.567Z] > authorizing via signed-in user (kartavyasoni175@gmail.com)
+[debug] [2025-09-02T12:51:33.567Z] [iam] checking project lalita-bhakti-studio for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2025-09-02T12:51:33.570Z] No OAuth tokens found
+[debug] [2025-09-02T12:51:33.571Z] No OAuth tokens found
+[debug] [2025-09-02T12:51:33.571Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2025-09-02T12:51:33.571Z] > authorizing via signed-in user (kartavyasoni175@gmail.com)
+[debug] [2025-09-02T12:51:33.578Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/lalita-bhakti-studio:testIamPermissions [none]
+[debug] [2025-09-02T12:51:33.578Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/lalita-bhakti-studio:testIamPermissions x-goog-quota-user=projects/lalita-bhakti-studio
+[debug] [2025-09-02T12:51:33.578Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/lalita-bhakti-studio:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-09-02T12:51:34.673Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/lalita-bhakti-studio:testIamPermissions 200
+[debug] [2025-09-02T12:51:34.680Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/lalita-bhakti-studio:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-09-02T12:51:34.681Z] No OAuth tokens found
+[debug] [2025-09-02T12:51:34.682Z] No OAuth tokens found
+[debug] [2025-09-02T12:51:34.691Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2025-09-02T12:51:34.691Z] > authorizing via signed-in user (kartavyasoni175@gmail.com)
+[debug] [2025-09-02T12:51:34.692Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/lalita-bhakti-studio [none]
+[debug] [2025-09-02T12:51:35.013Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/lalita-bhakti-studio 200
+[debug] [2025-09-02T12:51:35.014Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/lalita-bhakti-studio {"projectId":"lalita-bhakti-studio","projectNumber":"314080639188","displayName":"Lalita Bhakti Studio","name":"projects/lalita-bhakti-studio","resources":{"hostingSite":"lalita-bhakti-studio"},"state":"ACTIVE","etag":"1_cf609fe5-1a3d-466e-b943-618938e43abc"}
+[debug] [2025-09-02T12:51:48.385Z] defaultcredentials: no credential available.
+[debug] [2025-09-02T12:51:48.389Z] No OAuth tokens found
+[debug] [2025-09-02T12:51:48.389Z] No OAuth tokens found
+[debug] [2025-09-02T12:51:48.390Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2025-09-02T12:51:48.390Z] > authorizing via signed-in user (kartavyasoni175@gmail.com)
+[debug] [2025-09-02T12:51:48.396Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/lalita-bhakti-studio/sites pageToken=&pageSize=10
+[debug] [2025-09-02T12:51:48.890Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/lalita-bhakti-studio/sites 200
+[debug] [2025-09-02T12:51:48.890Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/lalita-bhakti-studio/sites {"sites":[{"name":"projects/lalita-bhakti-studio/sites/lalita-bhakti-studio","defaultUrl":"https://lalita-bhakti-studio.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2025-09-02T12:51:48.895Z] No OAuth tokens found
+[debug] [2025-09-02T12:51:48.896Z] No OAuth tokens found
+[debug] [2025-09-02T12:51:48.896Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2025-09-02T12:51:48.896Z] > authorizing via signed-in user (kartavyasoni175@gmail.com)
+[debug] [2025-09-02T12:51:48.896Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/lalita-bhakti-studio/sites 
+[debug] [2025-09-02T12:51:49.347Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/lalita-bhakti-studio/sites 200
+[debug] [2025-09-02T12:51:49.349Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/lalita-bhakti-studio/sites {"sites":[{"name":"projects/lalita-bhakti-studio/sites/lalita-bhakti-studio","defaultUrl":"https://lalita-bhakti-studio.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2025-09-02T12:51:49.349Z] No OAuth tokens found
+[debug] [2025-09-02T12:51:49.349Z] No OAuth tokens found
+[debug] [2025-09-02T12:51:49.349Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2025-09-02T12:51:49.359Z] > authorizing via signed-in user (kartavyasoni175@gmail.com)
+[debug] [2025-09-02T12:51:49.359Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/lalita-bhakti-studio/webApps/-/config [none]
+[debug] [2025-09-02T12:51:50.142Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/lalita-bhakti-studio/webApps/-/config 200
+[debug] [2025-09-02T12:51:50.145Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/lalita-bhakti-studio/webApps/-/config {"projectId":"lalita-bhakti-studio","appId":"1:314080639188:web:6bc46bc49e3496c659a341","storageBucket":"lalita-bhakti-studio.firebasestorage.app","apiKey":"AIzaSyDFLoIpHfiVJDT6X0lfLkjANMoncHwLXPo","authDomain":"lalita-bhakti-studio.firebaseapp.com","messagingSenderId":"314080639188"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+   The integration is known to work with Next.js version 12 - 15.0. You may encounter errors.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2025-09-02T12:52:17.882Z] No OAuth tokens found
+[debug] [2025-09-02T12:52:17.887Z] No OAuth tokens found
+[debug] [2025-09-02T12:52:17.887Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2025-09-02T12:52:17.889Z] > authorizing via signed-in user (kartavyasoni175@gmail.com)
+[debug] [2025-09-02T12:52:17.891Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/lalita-bhakti-studio/sites/lalita-bhakti-studio [none]
+[debug] [2025-09-02T12:52:18.258Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/lalita-bhakti-studio/sites/lalita-bhakti-studio 200
+[debug] [2025-09-02T12:52:18.259Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/lalita-bhakti-studio/sites/lalita-bhakti-studio {"name":"projects/lalita-bhakti-studio/sites/lalita-bhakti-studio","defaultUrl":"https://lalita-bhakti-studio.web.app","type":"DEFAULT_SITE"}
+[info]    ▲ Next.js 15.3.3
+   - Environments: .env.local, .env
+
+
+[info]    Creating an optimized production build ...
+

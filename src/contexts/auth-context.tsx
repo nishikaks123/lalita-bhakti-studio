@@ -1,3 +1,4 @@
+
 "use client";
 
 import React,
@@ -9,13 +10,16 @@ import React,
   type ReactNode,
 } from "react";
 import { onAuthStateChanged, type User } from "firebase/auth";
-import { auth }_from "@/lib/firebase";
+import { auth } from "@/lib/firebase";
 import { usePathname, useRouter } from "next/navigation";
 import { Skeleton } from "@/components/ui/skeleton";
+
+const ADMIN_EMAILS = ['kartavyasoni175@gmail.com'];
 
 type AuthContextType = {
   user: User | null;
   isLoading: boolean;
+  isAdmin: boolean;
 };
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -23,12 +27,14 @@ const AuthContext = createContext<AuthContextType | undefined>(undefined);
 export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const [user, setUser] = useState<User | null>(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [isAdmin, setIsAdmin] = useState(false);
   const pathname = usePathname();
   const router = useRouter();
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       setUser(user);
+      setIsAdmin(!!user && ADMIN_EMAILS.includes(user.email || ''));
       setIsLoading(false);
       if (!user && pathname !== "/") {
         router.push("/");
@@ -47,7 +53,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   }
 
   return (
-    <AuthContext.Provider value={{ user, isLoading }}>
+    <AuthContext.Provider value={{ user, isLoading, isAdmin }}>
       {children}
     </AuthContext.Provider>
   );

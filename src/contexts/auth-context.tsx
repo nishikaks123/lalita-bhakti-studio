@@ -32,17 +32,20 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const router = useRouter();
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
-      setUser(user);
-      setIsAdmin(!!user && ADMIN_EMAILS.includes(user.email || ''));
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+      setIsAdmin(!!currentUser && ADMIN_EMAILS.includes(currentUser.email || ''));
       setIsLoading(false);
-      if (!user && pathname !== "/") {
-        router.push("/");
-      }
     });
 
     return () => unsubscribe();
-  }, [pathname, router]);
+  }, []);
+
+  useEffect(() => {
+    if (!isLoading && !user && pathname !== '/') {
+      router.push('/');
+    }
+  }, [isLoading, user, pathname, router]);
 
   if (isLoading) {
     return (

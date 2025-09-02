@@ -2,7 +2,7 @@
 import type { SVGProps } from "react";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { doc, getDoc } from "firebase/firestore";
+import { get, ref } from "firebase/database";
 import { db } from "@/lib/firebase";
 
 const defaultLogo = "https://i.imgur.com/U8hMAh2.png";
@@ -13,11 +13,11 @@ export function Logo(props: SVGProps<SVGSVGElement> & { className?: string }) {
   useEffect(() => {
     const fetchLogo = async () => {
       try {
-        const docRef = doc(db, "settings", "logo");
-        const docSnap = await getDoc(docRef);
+        const logoRef = ref(db, "settings/logo");
+        const snapshot = await get(logoRef);
 
-        if (docSnap.exists() && docSnap.data().url) {
-          setLogoUrl(docSnap.data().url);
+        if (snapshot.exists() && snapshot.val().url) {
+          setLogoUrl(snapshot.val().url);
         } else {
           setLogoUrl(defaultLogo);
         }

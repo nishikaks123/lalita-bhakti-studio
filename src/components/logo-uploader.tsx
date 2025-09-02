@@ -5,9 +5,10 @@ import Image from 'next/image';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
-import { Loader2, UploadCloud, Wand2, X } from 'lucide-react';
-import { getDownloadURL, ref, uploadBytes } from 'firebase/storage';
-import { doc, setDoc } from 'firebase/firestore';
+import { Loader2, UploadCloud, X } from 'lucide-react';
+import { getDownloadURL, ref as storageRef, uploadBytes } from 'firebase/storage';
+import { ref as dbRef, set } from "firebase/database";
+
 
 import { Button } from '@/components/ui/button';
 import {
@@ -66,11 +67,11 @@ export function LogoUploader() {
 
     try {
         const logoFile = data.logo;
-        const storageRef = ref(storage, `logos/app-logo-${Date.now()}`);
-        const uploadResult = await uploadBytes(storageRef, logoFile);
+        const fileRef = storageRef(storage, `logos/app-logo-${Date.now()}`);
+        const uploadResult = await uploadBytes(fileRef, logoFile);
         const downloadURL = await getDownloadURL(uploadResult.ref);
 
-        await setDoc(doc(db, 'settings', 'logo'), { url: downloadURL });
+        await set(dbRef(db, 'settings/logo'), { url: downloadURL });
 
         toast({
             title: 'Success!',

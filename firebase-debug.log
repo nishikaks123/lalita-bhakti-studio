@@ -341,3 +341,56 @@ To get started with Firebase Data Connect:
 [info] ✔  Wrote functions/tsconfig.json 
 [info] ✔  Wrote functions/src/index.ts 
 [info] ✔  Wrote functions/.gitignore 
+[info] 
+[info] i  genkit: Installing Genkit CLI version 1.18.0
+ 
+[info] i  genkit: Installing NPM packages for genkit 
+[info] ✔  genkit: Successfully installed NPM packages 
+[info] i  genkit: Updating tsconfig.json 
+[info] ✔  genkit: Successfully updated tsconfig.json 
+[info] i  genkit: Updating package.json 
+[info] ✔  genkit: Successfully updated package.json 
+[info] Telemetry data can be used to monitor and gain insights into your AI features. There may be a cost associated with using this feature. See https://firebase.google.com/docs/genkit/observability/telemetry-collection.
+[info] i  genkit: Generating sample file 
+[info] ✔  genkit: Successfully generated sample file (src/genkit-sample.ts) 
+[info] 
+[info] 
+Login to Google Cloud using:
+[info]     gcloud auth application-default login --project lalita-bhakti-studio
+
+[info] Then start the Genkit developer experience by running:
+[info]     cd functions && npm run genkit:start
+[info] 
+=== Functions Setup
+[debug] [2025-09-02T12:50:48.371Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2025-09-02T12:50:48.375Z] > authorizing via signed-in user (kartavyasoni175@gmail.com)
+[debug] [2025-09-02T12:50:48.375Z] [iam] checking project lalita-bhakti-studio for permissions ["firebase.projects.get"]
+[debug] [2025-09-02T12:50:48.375Z] No OAuth tokens found
+[debug] [2025-09-02T12:50:48.376Z] No OAuth tokens found
+[debug] [2025-09-02T12:50:48.376Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2025-09-02T12:50:48.376Z] > authorizing via signed-in user (kartavyasoni175@gmail.com)
+[debug] [2025-09-02T12:50:48.376Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/lalita-bhakti-studio:testIamPermissions [none]
+[debug] [2025-09-02T12:50:48.381Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/lalita-bhakti-studio:testIamPermissions x-goog-quota-user=projects/lalita-bhakti-studio
+[debug] [2025-09-02T12:50:48.381Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/lalita-bhakti-studio:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2025-09-02T12:50:49.182Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/lalita-bhakti-studio:testIamPermissions 200
+[debug] [2025-09-02T12:50:49.183Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/lalita-bhakti-studio:testIamPermissions {"permissions":["firebase.projects.get"]}
+[info] 
+Detected existing codebase(s): default
+
+[info] Let's create a new codebase for your functions.
+[info] A directory corresponding to the codebase will be created in your project
+[info] with sample code pre-configured.
+
+[info] See https://firebase.google.com/docs/functions/organize-functions for
+[info] more information on organizing your functions using codebases.
+
+[info] Functions can be deployed with firebase deploy.
+
+[debug] [2025-09-02T12:51:11.292Z] Error: ENOTDIR: not a directory, scandir '/home/user/studio/y'
+    at Object.readdirSync (node:fs:1507:26)
+    at Object.createFileSync (/nix/store/mb7dm7av34020nn56xbny0fl17nwiddp-firebase-tools-14.14.0/lib/node_modules/firebase-tools/node_modules/fs-extra/lib/ensure/file.js:55:10)
+    at Config.writeProjectFile (/nix/store/mb7dm7av34020nn56xbny0fl17nwiddp-firebase-tools-14.14.0/lib/node_modules/firebase-tools/lib/config.js:160:12)
+    at Config.askWriteProjectFile (/nix/store/mb7dm7av34020nn56xbny0fl17nwiddp-firebase-tools-14.14.0/lib/node_modules/firebase-tools/lib/config.js:208:14)
+    at async Object.setup (/nix/store/mb7dm7av34020nn56xbny0fl17nwiddp-firebase-tools-14.14.0/lib/node_modules/firebase-tools/lib/init/features/functions/python.js:14:5)
+[error] 
+[error] Error: An unexpected error has occurred.

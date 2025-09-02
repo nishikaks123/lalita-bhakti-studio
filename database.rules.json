@@ -1,0 +1,10 @@
+{
+  "rules": {
+    ".read": "true",
+    "settings": {
+      "logo": {
+        ".write": "auth != null"
+      }
+    }
+  }
+}
